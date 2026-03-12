@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Article } from "@/data/articles";
 
@@ -10,10 +11,21 @@ type Props = {
 
 export default function ArticleCard({ article }: Props) {
   return (
-    <div className="group bg-white border border-gray-200 shadow-sm rounded hover:shadow hover:border-blue-300 transition-all duration-200 flex flex-col h-full">
-      <Link href={article.href} className="flex flex-col h-full p-5">
-        <div className="flex items-center gap-2 mb-3 flex-wrap">
-          {article.tags.slice(0, 2).map((tag) => (
+    <div className="group bg-white border border-gray-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+      <Link href={article.href} className="flex flex-col h-full">
+        {article.imageUrl && (
+          <div className="relative w-full aspect-video bg-slate-100 overflow-hidden">
+            <Image
+              src={article.imageUrl}
+              alt={article.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        )}
+        <div className="p-5 flex flex-col h-full">
+          <div className="flex items-center gap-2 mb-3 flex-wrap">
+            {article.tags.slice(0, 2).map((tag) => (
             <span key={tag} className="inline-block px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200">
               {tag}
             </span>
@@ -37,6 +49,7 @@ export default function ArticleCard({ article }: Props) {
             <span>読了 {article.readingTime}分</span>
           </div>
           <span className="text-blue-600 font-bold opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+        </div>
         </div>
       </Link>
     </div>

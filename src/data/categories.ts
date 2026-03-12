@@ -6,6 +6,7 @@ export type Category = {
   description: string;
   articleCount: number;
   icon: string;
+  imageUrl?: string;
 };
 
 export const categories: Category[] = [
@@ -18,6 +19,7 @@ export const categories: Category[] = [
       "大手転職エージェントの比較・ランキング・選び方を徹底解説。あなたに合ったエージェント選びをサポートします。",
     articleCount: 15,
     icon: "🤝",
+    imageUrl: "/images/category_agent.png",
   },
   {
     id: "it",
@@ -28,6 +30,7 @@ export const categories: Category[] = [
       "IT業界への転職・キャリアチェンジに役立つ情報を網羅。未経験からの転職方法やおすすめエージェントを紹介。",
     articleCount: 10,
     icon: "💻",
+    imageUrl: "/images/category_it.png",
   },
   {
     id: "second-career",
@@ -38,6 +41,7 @@ export const categories: Category[] = [
       "第二新卒・20代の転職に特化した情報。ベストタイミングや成功のコツ、おすすめエージェントを紹介。",
     articleCount: 10,
     icon: "🌱",
+    imageUrl: "/images/category_second_career.png",
   },
   {
     id: "sales",
@@ -48,6 +52,7 @@ export const categories: Category[] = [
       "営業職からの転職・営業職への転職を徹底サポート。年収アップ事例やおすすめ転職サービスを紹介。",
     articleCount: 10,
     icon: "📊",
+    imageUrl: "/images/category_sales.png",
   },
   {
     id: "executive",
@@ -58,6 +63,7 @@ export const categories: Category[] = [
       "年収800万円以上のハイクラス転職に特化。外資系・役職者向け転職エージェントの比較と活用法を解説。",
     articleCount: 5,
     icon: "👔",
+    imageUrl: "/images/category_executive.png",
   },
 ];
 

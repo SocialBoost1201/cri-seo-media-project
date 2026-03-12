@@ -47,8 +47,18 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* CTA Buttons */}
+        {/* CTA Buttons & Search */}
         <div className="hidden lg:flex items-center gap-3">
+          <Link
+            href="/search"
+            className="w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+            title="エージェント・記事を探す"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </Link>
+          <div className="w-px h-6 bg-slate-200 mx-1"></div>
           <Link
             href="/ai-career-diagnosis"
             className="px-4 py-2.5 text-sm font-semibold text-blue-600 hover:bg-blue-50 rounded-xl transition-all"
@@ -99,6 +109,17 @@ export default function Header() {
                   {cat.name}
                 </Link>
               ))}
+              <div className="h-px bg-slate-100 my-2"></div>
+              <Link
+                href="/search"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-4 py-3 text-slate-600 hover:text-blue-600 bg-slate-50 rounded-xl transition-all font-medium flex items-center gap-2"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                エージェント・記事を探す
+              </Link>
               <div className="border-t border-slate-200 mt-2 pt-3 flex flex-col gap-2">
                 <Link
                   href="/agent/comparison"

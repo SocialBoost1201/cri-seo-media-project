@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import type { Article } from "@/data/articles";
+import Image from "next/image";
+import type { Article } from "@/data/articles"; 
 import type { Agent } from "@/data/agents";
 import type { FAQItem } from "@/data/faqs";
 import Breadcrumb from "@/components/layout/Breadcrumb";
@@ -50,11 +51,23 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
               {article.title}
             </h1>
             <p className="text-slate-500 leading-relaxed mb-4">{article.description}</p>
-            <div className="flex items-center gap-3 text-sm text-slate-400">
+            <div className="flex items-center gap-3 text-sm text-slate-400 mb-8">
               <span>{article.updatedAt} 更新</span>
               <span className="w-1 h-1 rounded-full bg-slate-300" />
               <span>読了 {article.readingTime}分</span>
             </div>
+            
+            {article.imageUrl && (
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md">
+                <Image
+                  src={article.imageUrl}
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
@@ -79,6 +92,20 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
               {article.categorySlug === "executive" &&
                 "ハイクラス転職では、非公開求人の質と量が重要です。「エグゼクティブキャリア」は年収800万円以上の求人に特化しており、経営幹部ポジションも多数保有しています。"}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 差し込み画像 1 */}
+      <section className="py-6">
+        <div className="max-w-[800px] mx-auto px-5 sm:px-8">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-sm">
+            <Image
+              src="/images/article_insert_1.png"
+              alt="記事内イメージ"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>

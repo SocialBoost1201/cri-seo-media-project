@@ -11,6 +11,7 @@ export type Article = {
   tags: string[];
   isPopular?: boolean;
   isRecommended?: boolean;
+  imageUrl?: string;
 };
 
 export const articles: Article[] = [
@@ -28,6 +29,7 @@ export const articles: Article[] = [
     tags: ["転職エージェント", "比較", "おすすめ"],
     isPopular: true,
     isRecommended: true,
+    imageUrl: "/images/article_eyecatch_1.png",
   },
   {
     id: "it-agent",
@@ -43,6 +45,7 @@ export const articles: Article[] = [
     tags: ["IT転職", "エージェント", "未経験"],
     isPopular: true,
     isRecommended: true,
+    imageUrl: "/images/article_eyecatch_2.png",
   },
   {
     id: "second-career-agent",
