@@ -62,12 +62,12 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
       {/* 結論（GEO対応） */}
       <section className="py-8">
         <div className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <div className="bg-blue-50 rounded-2xl border border-blue-100 p-6 sm:p-7">
-            <h2 className="font-bold text-slate-900 mb-3 flex items-center gap-2">
-              <span className="w-6 h-6 rounded-lg flex items-center justify-center text-xs bg-white text-blue-600">📌</span>
+          <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 sm:p-8">
+            <h2 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-lg border-b border-slate-200/60 pb-3">
+              <span className="w-6 h-6 rounded-lg flex items-center justify-center text-xs bg-white text-blue-600 shadow-sm">📌</span>
               この記事の結論
             </h2>
-            <p className="text-sm text-slate-600 leading-relaxed mb-4">
+            <p className="text-sm text-slate-700 leading-relaxed mb-6">
               {article.categorySlug === "agent" &&
                 "転職エージェントは求人数・サポート品質・専門性で選ぶのが重要です。総合力なら「キャリアブリッジ」、若手向けなら「ネクストステップ」、IT特化なら「テックエージェント」がおすすめです。"}
               {article.categorySlug === "it" &&
@@ -79,57 +79,57 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
               {article.categorySlug === "executive" &&
                 "ハイクラス転職では、非公開求人の質と量が重要です。「エグゼクティブキャリア」は年収800万円以上の求人に特化しており、経営幹部ポジションも多数保有しています。"}
             </p>
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block">
-              <Link href="/agent/comparison" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 rounded-xl shadow-sm hover:shadow-md transition-all">
-                おすすめ転職エージェント比較を見る
-              </Link>
-            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Rankings */}
-      <section className="py-8 sm:py-12">
+      {/* Rankings (記事途中のおすすめエージェント枠) */}
+      <section className="py-8">
         <motion.div {...fadeIn} className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <h2 className="text-xl font-bold text-slate-900 mb-6">おすすめランキングTOP3</h2>
-          <div className="flex flex-col gap-5">
-            {topAgents.map((agent, i) => (
-              <RankingCard key={agent.id} agent={agent} rank={i + 1} />
-            ))}
+          <div className="bg-blue-50/50 border border-blue-100/50 rounded-2xl p-6 sm:p-8">
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-1.5 h-6 bg-blue-600 rounded-full" />
+              <h2 className="text-xl font-bold text-slate-900">記事の途中ですが、おすすめの転職エージェント</h2>
+            </div>
+            <div className="flex flex-col gap-5">
+              {topAgents.slice(0, 1).map((agent, i) => (
+                <div key={agent.id} className="relative">
+                  <span className="absolute -top-3 -left-3 z-10 bg-red-500 text-white text-[10px] font-black px-2 py-1 rounded shadow-sm tracking-wider transform -rotate-6">
+                    読者人気No.1
+                  </span>
+                  <RankingCard agent={agent} />
+                </div>
+              ))}
+            </div>
+            <div className="text-right mt-4">
+               <Link href="/agents" className="text-sm font-bold text-blue-600 hover:text-blue-700">
+                 他のエージェントも比較する →
+               </Link>
+            </div>
           </div>
         </motion.div>
       </section>
 
-      {/* Mid CTA */}
-      <section className="py-6">
-        <div className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <CTACard
-            title="自分に合う転職タイプを診断する"
-            description="6つの質問に答えるだけで、最適な転職タイプがわかります。"
-            buttonText="AIキャリア診断を受ける"
-            buttonHref="/ai-career-diagnosis"
-            variant="subtle"
-          />
-        </div>
-      </section>
-
-      {/* Detail */}
-      <section className="py-8 sm:py-12">
+      {/* Detail (記事本文相当) */}
+      <section className="py-8">
         <motion.div {...fadeIn} className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <h2 className="text-xl font-bold text-slate-900 mb-4">転職エージェントの選び方</h2>
-          <div className="text-sm text-slate-600 leading-relaxed space-y-4">
-            <h3 className="text-base font-semibold text-slate-900">メリット</h3>
-            <ul className="list-disc list-inside space-y-1.5">
-              <li>非公開求人にアクセスできる</li>
-              <li>履歴書添削・面接対策のサポートを受けられる</li>
-              <li>年収交渉を代行してもらえる</li>
-              <li>業界専門のアドバイザーに相談できる</li>
+          <div className="prose prose-slate max-w-none">
+            <h2 className="text-2xl font-bold text-slate-900 border-b-2 border-slate-100 pb-3 mb-6">転職エージェントの選び方</h2>
+            <p className="text-slate-700 leading-relaxed mb-6">
+              転職活動を成功させるためには、自分の目的に合ったエージェントを選ぶことが不可欠です。複数のサービスを比較し、相性の良いキャリアアドバイザーを見つけましょう。
+            </p>
+            <h3 className="text-lg font-bold text-slate-900 border-l-4 border-blue-600 pl-3 mb-4">利用するメリット</h3>
+            <ul className="list-disc list-inside space-y-2 text-slate-700 mb-8 bg-slate-50 p-6 rounded-xl border border-slate-100">
+              <li>一般には公開されていない非公開求人にアクセスできる</li>
+              <li>プロの視点から履歴書添削・面接対策のサポートを受けられる</li>
+              <li>自分では言い出しにくい年収交渉を代行してもらえる</li>
+              <li>業界専門のアドバイザーにリアルな社内情勢を直接聞ける</li>
             </ul>
-            <h3 className="text-base font-semibold text-slate-900">デメリット</h3>
-            <ul className="list-disc list-inside space-y-1.5">
-              <li>担当者との相性が合わない場合がある</li>
-              <li>希望と異なる求人を紹介されることがある</li>
-              <li>複数登録すると連絡が多くなる</li>
+            <h3 className="text-lg font-bold text-slate-900 border-l-4 border-blue-600 pl-3 mb-4">注意点・デメリット</h3>
+            <ul className="list-disc list-inside space-y-2 text-slate-700 mb-6 p-6">
+              <li>担当者との相性が合わない場合がある（その場合は変更依頼が可能）</li>
+              <li>希望条件を明確に伝えないと、的外れな求人を紹介されることがある</li>
+              <li>複数登録すると面談や連絡の管理が少し煩雑になる</li>
             </ul>
           </div>
         </motion.div>
@@ -164,15 +164,34 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
         </section>
       )}
 
-      {/* Bottom CTA */}
-      <section className="py-12 sm:py-16">
+      {/* Bottom CTA (リッチなBOX) */}
+      <section className="py-16 border-t border-slate-200/60">
         <div className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <CTACard
-            title="あなたに合った転職エージェントを見つけよう"
-            description="複数のエージェントを比較して、無料で相談を始めましょう。"
-            buttonText="全エージェントの比較を見る"
-            buttonHref="/agent/comparison"
-          />
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-700 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
+            
+            <div className="relative z-10 text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">
+                転職に悩んでいる人へ
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base max-w-lg mx-auto">
+                自分に合ったエージェントがわからない、あるいは自分の市場価値を知りたい方は、当サイトの無料ツールをご活用ください。
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-4 relative z-10">
+               <Link href="/ai-career-diagnosis" className="flex flex-col items-center justify-center p-6 bg-white/10 hover:bg-white/20 border border-white/10 rounded-2xl backdrop-blur-sm transition-all group">
+                 <span className="text-3xl mb-3">🤖</span>
+                 <span className="text-white font-bold mb-1">AIキャリア診断</span>
+                 <span className="text-xs text-blue-200">5問で適性エージェントがわかる</span>
+               </Link>
+               <Link href="/agents" className="flex flex-col items-center justify-center p-6 bg-white/10 hover:bg-white/20 border border-white/10 rounded-2xl backdrop-blur-sm transition-all group">
+                 <span className="text-3xl mb-3">🏢</span>
+                 <span className="text-white font-bold mb-1">エージェント比較</span>
+                 <span className="text-xs text-blue-200">主要各社を一覧で横断比較</span>
+               </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
