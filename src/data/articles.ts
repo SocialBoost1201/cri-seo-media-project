@@ -45,7 +45,7 @@ export const articles: Article[] = [
     tags: ["IT転職", "エージェント", "未経験"],
     isPopular: true,
     isRecommended: true,
-    imageUrl: "/images/article_eyecatch_2.png",
+    imageUrl: "/images/hero_it.png",
   },
   {
     id: "second-career-agent",
@@ -60,6 +60,7 @@ export const articles: Article[] = [
     readingTime: 9,
     tags: ["第二新卒", "転職エージェント", "20代"],
     isPopular: true,
+    imageUrl: "/images/hero_second_career.png",
   },
   {
     id: "sales-agent",
@@ -73,6 +74,7 @@ export const articles: Article[] = [
     updatedAt: "2026-03-01",
     readingTime: 8,
     tags: ["営業転職", "エージェント", "年収アップ"],
+    imageUrl: "/images/category_sales.png",
   },
   {
     id: "executive-agent",
@@ -86,6 +88,7 @@ export const articles: Article[] = [
     updatedAt: "2026-03-01",
     readingTime: 10,
     tags: ["ハイクラス", "転職エージェント", "高年収"],
+    imageUrl: "/images/hero_executive.png",
   },
 ];
 
