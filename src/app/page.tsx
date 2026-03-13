@@ -122,7 +122,6 @@ export default function HomePage() {
               <Link key={`feature-${i}`} href={item.href} className="flex items-center justify-between p-4 sm:p-5 bg-white border border-blue-400 sm:border-2 sm:border-blue-400 rounded hover:bg-blue-50/30 hover:shadow-md transition-all group">
                 <div className="flex items-baseline gap-2 w-full justify-center pl-4 sm:pl-0 sm:ml-auto sm:mr-auto">
                   <span className="text-[22px] sm:text-2xl font-bold text-blue-600 font-sans tracking-tight">{item.title}</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7 mb-2 text-green-600"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
                   <span className="text-[13px] sm:text-[15px] font-bold text-slate-800">{item.sub}</span>
                 </div>
                 <span className="text-[10px] text-slate-800 ml-auto group-hover:translate-x-1 transition-transform">▶</span>
