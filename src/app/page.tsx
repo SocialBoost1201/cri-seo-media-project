@@ -197,8 +197,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-
-
       {/* 8. AI Diagnosis Section (Future Expansion) */}
       <section className="py-24 bg-slate-50">
         <motion.div {...fadeIn} className="max-w-[1000px] mx-auto px-5 sm:px-8">
