@@ -25,19 +25,35 @@ export default function CategoryPageContent({ category, articles }: Props) {
       <Breadcrumb />
 
       {/* Header */}
-      <section className="relative overflow-hidden bg-white pt-28 sm:pt-32 pb-16 sm:pb-20">
-        <div className="relative max-w-[1200px] mx-auto px-5 sm:px-8">
+      <section className="relative overflow-hidden pt-32 sm:pt-40 pb-20 sm:pb-24">
+        {/* 背景画像 */}
+        <div className="absolute inset-0 z-0">
+          {category.imageUrl ? (
+            <img
+              src={category.imageUrl}
+              alt={`${category.name}のイメージ`}
+              className="w-full h-full object-cover object-center"
+            />
+          ) : (
+            <div className="w-full h-full bg-slate-800" />
+          )}
+          {/* ダークグラデーションオーバーレイ */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-900/60 to-slate-900/90 mix-blend-multiply" />
+        </div>
+
+        <div className="relative z-10 max-w-[1200px] mx-auto px-5 sm:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" as const }}
           >
-            <div className="text-4xl mb-5">{category.icon}</div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+            <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4 drop-shadow-md">
               {category.name}
             </h1>
-            <p className="text-slate-500 max-w-2xl leading-relaxed mb-4">{category.description}</p>
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-600 border border-blue-100">
+            <p className="text-slate-200 max-w-2xl leading-relaxed mb-6 drop-shadow">
+              {category.description}
+            </p>
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold bg-white/20 text-white backdrop-blur-sm border border-white/30 shadow-sm">
               {category.articleCount}件の記事
             </span>
           </motion.div>

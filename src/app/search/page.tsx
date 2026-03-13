@@ -15,7 +15,7 @@ export default function SearchPage() {
           <div className="relative max-w-2xl mx-auto">
             <input 
               type="text" 
-              placeholder="🔍 キーワード、エージェント名、職種..." 
+              placeholder="キーワード、エージェント名、職種..." 
               className="w-full h-14 pl-6 pr-14 text-lg rounded-2xl border-2 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all outline-none"
             />
             <button className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center hover:bg-blue-700 transition-colors">

@@ -77,7 +77,9 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
         <div className="max-w-[800px] mx-auto px-5 sm:px-8">
           <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 sm:p-8">
             <h2 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-lg border-b border-slate-200/60 pb-3">
-              <span className="w-6 h-6 rounded-lg flex items-center justify-center text-xs bg-white text-blue-600 shadow-sm">📌</span>
+              <span className="w-6 h-6 rounded-lg flex items-center justify-center bg-white text-blue-600 shadow-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg>
+              </span>
               この記事の結論
             </h2>
             <p className="text-sm text-slate-700 leading-relaxed mb-6">
