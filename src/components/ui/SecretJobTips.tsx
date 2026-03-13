@@ -9,9 +9,8 @@ export default function SecretJobTips() {
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
-      className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 sm:p-8 my-8 relative overflow-hidden"
+      className="bg-slate-50 border border-slate-200 rounded-xl p-6 sm:p-8 my-8 relative overflow-hidden"
     >
-      <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
       
       <div className="flex items-center gap-3 mb-4 border-b border-slate-200/60 pb-3">
         <span className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-100 text-blue-600">

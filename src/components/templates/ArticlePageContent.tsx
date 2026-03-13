@@ -60,7 +60,7 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
             </div>
             
             {article.imageUrl && (
-              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md">
+              <div className="relative w-full aspect-video rounded-xl border border-slate-200 overflow-hidden shadow-sm">
                 <Image
                   src={article.imageUrl}
                   alt={article.title}
@@ -77,7 +77,7 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
       {/* 結論（GEO対応） */}
       <section className="py-8">
         <div className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <div className="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 sm:p-8">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 sm:p-8">
             <h2 className="font-bold text-slate-900 mb-4 flex items-center gap-2 text-lg border-b border-slate-200/60 pb-3">
               <span className="w-6 h-6 rounded-lg flex items-center justify-center bg-white text-blue-600 shadow-sm">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg>
@@ -103,7 +103,7 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
       {/* 差し込み画像 1 */}
       <section className="py-6">
         <div className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-sm">
+          <div className="relative w-full aspect-video rounded-xl border border-slate-200 overflow-hidden shadow-sm">
             <Image
               src="/images/article_insert_1.png"
               alt="記事内イメージ"
@@ -117,7 +117,7 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
       {/* Rankings (記事途中のおすすめエージェント枠) */}
       <section className="py-8">
         <motion.div {...fadeIn} className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <div className="bg-blue-50/50 border border-blue-100/50 rounded-2xl p-6 sm:p-8">
+          <div className="bg-blue-50/50 border border-blue-100 rounded-xl p-6 sm:p-8">
             <div className="flex items-center gap-2 mb-6">
               <span className="w-1.5 h-6 bg-blue-600 rounded-full" />
               <h2 className="text-xl font-bold text-slate-900">記事の途中ですが、おすすめの転職エージェント</h2>
@@ -192,7 +192,7 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
                 <Link
                   key={a.id}
                   href={a.href}
-                  className="block bg-white rounded-2xl border border-slate-200 p-5 hover:border-blue-200 hover:shadow-md transition-all"
+                  className="block bg-white rounded-xl border border-slate-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all"
                 >
                   <h3 className="text-sm font-semibold text-slate-900 mb-1 line-clamp-2">{a.title}</h3>
                   <p className="text-xs text-slate-400">{a.updatedAt} 更新</p>
@@ -204,10 +204,10 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
       )}
 
       {/* Bottom CTA (リッチなBOX) */}
-      <section className="py-16 border-t border-slate-200/60">
+      <section className="py-10 sm:py-12 border-t border-slate-200">
         <div className="max-w-[800px] mx-auto px-5 sm:px-8">
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-700 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
+          <div className="bg-slate-800 rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-700 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-slate-700/30 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
             
             <div className="relative z-10 text-center mb-8">
               <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">
@@ -219,12 +219,12 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 relative z-10">
-               <Link href="/ai-career-diagnosis" className="flex flex-col items-center justify-center p-6 bg-white/10 hover:bg-white/20 border border-white/10 rounded-2xl backdrop-blur-sm transition-all group">
+               <Link href="/ai-career-diagnosis" className="flex flex-col items-center justify-center p-6 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl transition-all group">
                  <span className="text-3xl mb-3">🤖</span>
                  <span className="text-white font-bold mb-1">AIキャリア診断</span>
                  <span className="text-xs text-blue-200">5問で適性エージェントがわかる</span>
                </Link>
-               <Link href="/agents" className="flex flex-col items-center justify-center p-6 bg-white/10 hover:bg-white/20 border border-white/10 rounded-2xl backdrop-blur-sm transition-all group">
+               <Link href="/agents" className="flex flex-col items-center justify-center p-6 bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl transition-all group">
                  <span className="text-3xl mb-3">🏢</span>
                  <span className="text-white font-bold mb-1">エージェント比較</span>
                  <span className="text-xs text-blue-200">主要各社を一覧で横断比較</span>

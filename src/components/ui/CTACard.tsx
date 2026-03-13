@@ -15,10 +15,10 @@ export default function CTACard({ title, description, buttonText, buttonHref, va
   const isPrimary = variant === "primary";
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl ${isPrimary ? "p-8 sm:p-12" : "p-8 sm:p-10"} ${
+    <div className={`relative overflow-hidden rounded-xl ${isPrimary ? "p-6 sm:p-8" : "p-6 sm:p-8"} ${
       isPrimary
-        ? "bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100/50 shadow-sm"
-        : "bg-white border border-slate-200/60 shadow-sm"
+        ? "bg-slate-50 border border-slate-200"
+        : "bg-white border border-slate-200/60"
     }`}>
       {/* Background decoration for primary variant */}
       {isPrimary && (
@@ -39,8 +39,8 @@ export default function CTACard({ title, description, buttonText, buttonHref, va
           <Link
             href={buttonHref}
             className={isPrimary
-              ? "inline-flex items-center justify-center gap-2 w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-[15px]"
-              : "inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3.5 bg-slate-900 text-white font-bold rounded-xl shadow hover:bg-slate-800 hover:-translate-y-0.5 transition-all duration-300 text-[14px]"
+              ? "inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg shadow-sm hover:shadow transition-all duration-300 text-[15px]"
+              : "inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-3 bg-white border border-slate-300 text-slate-700 font-bold rounded-lg shadow-sm hover:bg-slate-50 transition-all duration-300 text-[14px]"
             }
           >
             {buttonText}

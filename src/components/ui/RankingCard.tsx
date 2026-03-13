@@ -42,12 +42,12 @@ export default function RankingCard({ agent, rank }: Props) {
       <div className="p-5 flex flex-col md:flex-row gap-6">
         {/* Left: Image & Features */}
         <div className="w-full md:w-1/4 flex flex-col gap-3">
-          <div className="aspect-4/3 bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-100/50 rounded-xl flex items-center justify-center relative overflow-hidden shadow-inner group">
+          <div className="aspect-4/3 bg-slate-50 border border-slate-200 rounded-lg flex items-center justify-center relative overflow-hidden group">
             {/* 装飾用の背景 */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.1),transparent_70%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.05),transparent_70%)]" />
             <div className="absolute w-full h-full bg-white/20 backdrop-blur-[1px]" />
             {/* ロゴの代わりとなるイニシャルタイポグラフィ */}
-            <span className="relative z-10 text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-700 to-indigo-800 drop-shadow-sm group-hover:scale-105 transition-transform">
+            <span className="relative z-10 text-3xl font-black text-blue-600 group-hover:scale-105 transition-transform">
               {agent.name.substring(0, 2)}
             </span>
           </div>
@@ -72,8 +72,8 @@ export default function RankingCard({ agent, rank }: Props) {
           </p>
 
           {/* Specs Table */}
-          <div className="border border-slate-100 rounded-xl overflow-hidden text-sm mb-6">
-            <div className="flex border-b border-slate-100 last:border-0">
+          <div className="border border-slate-200 rounded-lg overflow-hidden text-sm mb-6">
+            <div className="flex border-b border-slate-200 last:border-0">
               <div className="w-1/3 bg-slate-50 px-3 py-2.5 font-bold text-slate-700 border-r border-slate-100 flex items-center text-xs">公開求人数</div>
               <div className="w-2/3 px-3 py-2.5 font-medium text-slate-900 flex items-center bg-white">{agent.jobCount}</div>
             </div>
@@ -90,7 +90,7 @@ export default function RankingCard({ agent, rank }: Props) {
           <div className="mt-auto flex justify-center sm:justify-end">
             <Link
               href={agent.url}
-              className="w-full sm:w-auto text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-10 py-3.5 rounded-xl shadow hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-[15px] flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3 rounded-lg border border-blue-700 shadow-sm hover:shadow transition-all duration-300 text-[15px] flex items-center justify-center gap-2 group"
             >
               詳細を見る
               <span className="font-normal text-sm transition-transform group-hover:translate-x-1">→</span>

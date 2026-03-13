@@ -78,7 +78,7 @@ export default function ComparisonPageContent() {
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 sm:py-20">
+      <section className="py-10 sm:py-12">
         <motion.div {...fadeIn} className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-8">転職エージェント比較表</h2>
           <div className="bg-white border-t-4 border-t-blue-600 border border-gray-200 shadow-md rounded-lg overflow-hidden">
@@ -146,7 +146,7 @@ export default function ComparisonPageContent() {
       </section>
 
       {/* Rankings */}
-      <section className="relative py-12 sm:py-16 bg-slate-50">
+      <section className="relative py-10 sm:py-12 bg-slate-50">
         <motion.div {...fadeIn} className="relative max-w-[1200px] mx-auto px-5 sm:px-8">
           
           {/* 非公開求人TIPS & 複数登録ガイド */}
@@ -178,10 +178,10 @@ export default function ComparisonPageContent() {
       </section>
 
       {/* Criteria */}
-      <section className="py-10 sm:py-12">
+      <section className="py-8 sm:py-10">
         <motion.div {...fadeIn} className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-8">比較基準・評価方法</h2>
-          <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-7 sm:p-10">
+          <div className="bg-white border border-slate-200 rounded-xl p-6 sm:p-8">
             <p className="text-sm text-slate-500 mb-6 leading-relaxed">
               本ランキングは以下の5指標を重み付けして総合評価を算出しています。
             </p>
@@ -205,7 +205,7 @@ export default function ComparisonPageContent() {
       </section>
 
       {/* FAQ */}
-      <section className="relative py-12 sm:py-16 bg-slate-50">
+      <section className="relative py-10 sm:py-12 bg-slate-50">
         <motion.div {...fadeIn} className="relative max-w-[1200px] mx-auto px-5 sm:px-8">
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight text-center mb-8">よくある質問</h2>
           <div className="max-w-3xl mx-auto">
@@ -215,7 +215,7 @@ export default function ComparisonPageContent() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-10 sm:py-12">
+      <section className="py-8 sm:py-10">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <CTACard
             title="あなたに合った転職エージェントを見つけよう"

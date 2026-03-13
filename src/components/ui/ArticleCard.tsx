@@ -11,7 +11,7 @@ type Props = {
 
 export default function ArticleCard({ article }: Props) {
   return (
-    <div className="group bg-white border border-gray-200 shadow-sm rounded-2xl overflow-hidden hover:shadow-lg hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
+    <div className="group bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-sm hover:border-blue-300 transition-all duration-300 flex flex-col h-full">
       <Link href={article.href} className="flex flex-col h-full">
         {article.imageUrl && (
           <div className="relative w-full aspect-video bg-slate-100 overflow-hidden">

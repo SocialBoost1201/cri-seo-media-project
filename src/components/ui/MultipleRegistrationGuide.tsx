@@ -4,10 +4,7 @@ import Image from 'next/image';
 
 export default function MultipleRegistrationGuide() {
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-slate-50 border border-blue-100 rounded-2xl p-6 sm:p-8 my-10 shadow-sm relative overflow-hidden">
-      {/* Background Accent */}
-      <div className="absolute -right-20 -top-20 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl" />
-      
+    <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 sm:p-8 my-10 relative overflow-hidden">
       <div className="relative z-10">
         <div className="flex items-center gap-3 mb-5">
           <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
@@ -26,7 +23,7 @@ export default function MultipleRegistrationGuide() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           {/* Pattern A */}
-          <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm hover:border-blue-300 transition-colors">
             <div className="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full mb-3">
               パターンA：20代・若手・第二新卒
             </div>
@@ -45,7 +42,7 @@ export default function MultipleRegistrationGuide() {
           </div>
 
           {/* Pattern B */}
-          <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm hover:border-blue-300 transition-colors">
             <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-full mb-3">
               パターンB：IT・Web・エンジニア
             </div>
@@ -64,7 +61,7 @@ export default function MultipleRegistrationGuide() {
           </div>
 
           {/* Pattern C */}
-          <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-lg border border-slate-200 p-5 shadow-sm hover:border-blue-300 transition-colors">
             <div className="inline-block px-3 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded-full mb-3">
               パターンC：ミドル層・ハイクラス
             </div>

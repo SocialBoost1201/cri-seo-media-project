@@ -57,10 +57,10 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/agents/ranking" className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 border border-blue-500/50 text-white font-bold rounded-xl shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 transition-all duration-300 text-[15px] flex items-center justify-center gap-2">
+              <Link href="/agents/ranking" className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 border border-blue-600 text-white font-bold rounded-lg shadow-sm transition-all duration-300 text-[15px] flex items-center justify-center gap-2">
                 転職エージェントランキングを見る →
               </Link>
-              <Link href="/agents" className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-xl shadow-sm hover:bg-white/20 transition-all duration-300 text-[15px] flex items-center justify-center gap-2">
+              <Link href="/agents" className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-lg transition-all duration-300 text-[15px] flex items-center justify-center gap-2 hover:bg-white/20">
                 転職エージェント比較を見る
               </Link>
             </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
       <LogoMarquee />
 
       {/* 2. 人気転職エージェント & 4. ランキング */}
-      <section className="py-24 bg-slate-50 border-y border-slate-100">
+      <section className="py-12 bg-slate-50 border-y border-slate-100">
         <motion.div {...fadeIn} className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">総合 おすすめ転職エージェントランキング</h2>
@@ -86,11 +86,11 @@ export default function HomePage() {
           </div>
 
           <div className="text-center mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/agents/ranking" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-900 text-white font-bold rounded-xl shadow-sm hover:shadow hover:bg-slate-800 transition-all text-sm group">
+            <Link href="/agents/ranking" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-lg shadow-sm hover:bg-slate-900 transition-all text-sm group">
               ランキングの続きを見る (4位〜)
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
-            <Link href="/agents" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-xl shadow-sm hover:shadow hover:bg-slate-50 transition-all text-sm group">
+            <Link href="/agents" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-lg hover:bg-slate-50 transition-all text-sm group">
               全エージェントの比較表を見る
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </Link>
@@ -99,7 +99,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. 求人特集 */}
-      <section className="py-16 bg-white px-5 sm:px-8">
+      <section className="py-10 bg-white px-5 sm:px-8">
         <motion.div {...fadeIn} className="max-w-[900px] mx-auto">
           <div className="text-center mb-10 flex flex-col items-center justify-center">
             <h2 className="text-[26px] sm:text-[30px] font-extrabold text-slate-900 tracking-tight pb-3 border-b-4 border-blue-600 inline-block px-4">
@@ -132,7 +132,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. 職種から探す */}
-      <section className="py-16 bg-white border-b border-slate-100 px-5 sm:px-8">
+      <section className="py-10 bg-white border-b border-slate-100 px-5 sm:px-8">
         <motion.div {...fadeIn} className="max-w-[1200px] mx-auto">
           <div className="text-center mb-10 flex flex-col items-center justify-center">
             <h2 className="text-[26px] sm:text-[30px] font-extrabold text-slate-900 tracking-tight pb-3 border-b-4 border-blue-600 inline-block px-4">
@@ -165,7 +165,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. SEO記事導線 */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 bg-slate-50">
         <motion.div {...fadeIn} className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <div className="flex items-center justify-between mb-10">
             <div>
@@ -198,15 +198,15 @@ export default function HomePage() {
       </section>
 
       {/* 8. AI Diagnosis Section (Future Expansion) */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 bg-slate-50">
         <motion.div {...fadeIn} className="max-w-[1000px] mx-auto px-5 sm:px-8">
-          <div className="bg-white rounded-3xl p-8 sm:p-14 shadow-sm overflow-hidden relative border border-slate-200">
+          <div className="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200 relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-slate-600 text-white text-[10px] font-black px-4 py-1.5 rounded-bl-xl tracking-widest shadow-sm">
               将来拡張機能
             </div>
             
             <div className="relative z-10 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white text-3xl mb-6 shadow-sm border border-slate-100 text-blue-500">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-white text-3xl mb-6 shadow-sm border border-slate-100 text-blue-500">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
                 </svg>
@@ -218,7 +218,7 @@ export default function HomePage() {
                 比較・ランキング機能に加えて、将来的にサイトの付加価値を高めるためのオプション機能として「AIキャリア診断」の組み込みも可能です。簡単な質問から適正エージェントを自動マッチングします。
               </p>
               
-              <Link href="/ai-career-diagnosis" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-blue-600 font-bold text-sm rounded-xl shadow-sm border border-blue-200 hover:bg-blue-50 transition-all duration-300 group">
+              <Link href="/ai-career-diagnosis" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-blue-600 font-bold text-sm rounded-lg shadow-sm border border-blue-300 hover:bg-blue-50 transition-all duration-300 group">
                 デモ機能を確認する
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </Link>
@@ -228,7 +228,7 @@ export default function HomePage() {
       </section>
 
       {/* 9. Bottom CTA */}
-      <section className="py-24 bg-white border-t border-slate-100">
+      <section className="py-12 bg-white border-t border-slate-100">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <CTACard
             title="転職を成功させるために"

@@ -40,9 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${inter.variable} ${notoSansJP.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${notoSansJP.variable} font-sans antialiased text-slate-800 bg-white`}>
         <Header />
-        <main className="pt-[var(--header-height)]">{children}</main>
+        <main className="pt-(--header-height)">{children}</main>
         <Footer />
       </body>
     </html>
