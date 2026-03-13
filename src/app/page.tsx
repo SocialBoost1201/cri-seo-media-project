@@ -9,6 +9,7 @@ import { getTopAgents } from "@/data/agents";
 import ArticleCard from "@/components/ui/ArticleCard";
 import RankingCard from "@/components/ui/RankingCard";
 import CTACard from "@/components/ui/CTACard";
+import LogoMarquee from "@/components/ui/LogoMarquee";
 
 const fadeIn = {
   initial: { opacity: 0, y: 32 },
@@ -67,6 +68,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 導入実績・提携エージェント (Logo Marquee) */}
+      <LogoMarquee />
+
       {/* 2. 人気転職エージェント & 4. ランキング */}
       <section className="py-24 bg-slate-50 border-y border-slate-100">
         <motion.div {...fadeIn} className="max-w-[1200px] mx-auto px-5 sm:px-8">
@@ -94,35 +98,66 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* 3. 転職タイプ別カテゴリ導線 */}
-      <section className="relative py-20 bg-white border-b border-slate-100">
-        <motion.div {...fadeIn} className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-slate-900 tracking-tight">目的・タイプ別から探す</h2>
-            <p className="text-sm text-slate-500 mt-2">あなたにぴったりの特化型エージェントが見つかります</p>
+      {/* 3. 求人特集 */}
+      <section className="py-16 bg-white px-5 sm:px-8">
+        <motion.div {...fadeIn} className="max-w-[900px] mx-auto">
+          <div className="text-center mb-10 flex flex-col items-center justify-center">
+            <h2 className="text-[26px] sm:text-[30px] font-extrabold text-slate-900 tracking-tight pb-3 border-b-4 border-blue-600 inline-block px-4">
+              求人特集
+            </h2>
+            <p className="text-sm font-bold text-blue-600 mt-3 tracking-widest uppercase">
+              Featured Agencies
+            </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {categories.slice(0, 4).map((cat) => (
-              <Link key={cat.id} href={`/category/${cat.id}`} className="group flex flex-col bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="relative w-full aspect-video bg-slate-100 overflow-hidden">
-                  {cat.imageUrl ? (
-                    <Image
-                      src={cat.imageUrl}
-                      alt={`${cat.name}のイメージ画像`}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-4xl">
-                      {cat.icon}
-                    </div>
-                  )}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            {[
+              { title: "20代向け", sub: "の求人特集", href: "/category/second-career" },
+              { title: "30代向け", sub: "の求人特集", href: "/category/agent" },
+              { title: "40代向け", sub: "の求人特集", href: "/category/agent" },
+              { title: "50代向け", sub: "の求人特集", href: "/category/executive" },
+              { title: "女性向け", sub: "の求人特集", href: "/category/women" },
+              { title: "ハイクラス", sub: "求人特集", href: "/category/executive" },
+            ].map((item, i) => (
+              <Link key={`feature-${i}`} href={item.href} className="flex items-center justify-between p-4 sm:p-5 bg-white border border-blue-400 sm:border-2 sm:border-blue-400 rounded hover:bg-blue-50/30 hover:shadow-md transition-all group">
+                <div className="flex items-baseline gap-2 w-full justify-center pl-4 sm:pl-0 sm:ml-auto sm:mr-auto">
+                  <span className="text-[22px] sm:text-2xl font-bold text-blue-600 font-sans tracking-tight">{item.title}</span>
+                  <span className="text-[13px] sm:text-[15px] font-bold text-slate-800">{item.sub}</span>
                 </div>
-                <div className="p-4 sm:p-5 flex flex-col items-center justify-center text-center">
-                  <span className="text-sm sm:text-base font-bold text-slate-800">{cat.name}</span>
+                <span className="text-[10px] text-slate-800 ml-auto group-hover:translate-x-1 transition-transform">▶</span>
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* 4. 職種から探す */}
+      <section className="py-16 bg-white border-b border-slate-100 px-5 sm:px-8">
+        <motion.div {...fadeIn} className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-10 flex flex-col items-center justify-center">
+            <h2 className="text-[26px] sm:text-[30px] font-extrabold text-slate-900 tracking-tight pb-3 border-b-4 border-blue-600 inline-block px-4">
+              職種から探す
+            </h2>
+            <p className="text-sm font-bold text-blue-600 mt-3 tracking-widest uppercase">
+              Job Types
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-6">
+            {[
+              { name: "IT・Web系", img: "/images/category_it.png", href: "/category/it" },
+              { name: "営業職", img: "/images/category_sales.png", href: "/category/sales" },
+              { name: "未経験・第二新卒", img: "/images/category_second_career.png", href: "/category/second-career" },
+              { name: "管理部門・バックオフィス", img: "/images/category_women.png", href: "/category/agent" },
+              { name: "ハイクラスエグゼクティブ", img: "/images/category_executive.png", href: "/category/executive" },
+            ].map((cat, i) => (
+              <Link key={`job-${i}`} href={cat.href} className="group flex flex-col items-center gap-2 sm:gap-3">
+                <div className="relative w-full aspect-video bg-slate-100 overflow-hidden shadow-sm group-hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)] transition-all">
+                  <Image src={cat.img} alt={cat.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  {/* 画像上のシャドウグラデーション */}
+                  <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors duration-300" />
                 </div>
+                <span className="text-xs sm:text-sm font-bold text-slate-900">{cat.name}</span>
               </Link>
             ))}
           </div>
