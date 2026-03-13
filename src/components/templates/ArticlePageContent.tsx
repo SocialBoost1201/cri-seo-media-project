@@ -8,6 +8,7 @@ import type { Agent } from "@/data/agents";
 import type { FAQItem } from "@/data/faqs";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import RankingCard from "@/components/ui/RankingCard";
+import SecretJobTips from "@/components/ui/SecretJobTips";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import CTACard from "@/components/ui/CTACard";
 
@@ -137,6 +138,13 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
             </div>
           </div>
         </motion.div>
+      </section>
+
+      {/* 非公開求人TIPS（1回目インサート） */}
+      <section className="py-2">
+        <div className="max-w-[800px] mx-auto px-5 sm:px-8">
+          <SecretJobTips />
+        </div>
       </section>
 
       {/* Detail (記事本文相当) */}

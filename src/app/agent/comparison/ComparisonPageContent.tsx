@@ -7,6 +7,7 @@ import { comparisonFaqs } from "@/data/faqs";
 import Breadcrumb from "@/components/layout/Breadcrumb";
 import RankingCard from "@/components/ui/RankingCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import SecretJobTips from "@/components/ui/SecretJobTips";
 import CTACard from "@/components/ui/CTACard";
 
 const fadeIn = {
@@ -145,6 +146,12 @@ export default function ComparisonPageContent() {
       {/* Rankings */}
       <section className="relative py-24 sm:py-32 bg-slate-50">
         <motion.div {...fadeIn} className="relative max-w-[1200px] mx-auto px-5 sm:px-8">
+          
+          {/* 非公開求人TIPS */}
+          <div className="max-w-[800px] mx-auto mb-16">
+            <SecretJobTips />
+          </div>
+
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-8">おすすめ転職エージェントランキング</h2>
           <div className="flex flex-col gap-6">
             {sortedAgents.map((agent, i) => (

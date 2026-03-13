@@ -275,13 +275,15 @@ export default function DiagnosisPage() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 mb-14">
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex-1">
-                  <Link href={result.categoryHref} className="flex items-center justify-center gap-2 w-full px-7 py-3.5 text-sm font-semibold text-white bg-blue-600 rounded shadow hover:bg-blue-700 transition-all">
-                    {result.ctaText} <span>→</span>
+                  <Link href={result.categoryHref} className="flex flex-col items-center justify-center gap-1 w-full px-7 py-3 text-white bg-blue-600 rounded shadow hover:bg-blue-700 transition-all">
+                    <span className="text-sm font-semibold flex items-center gap-2">{result.ctaText} <span>→</span></span>
+                    <span className="text-[10px] text-blue-100 opacity-90">非公開求人をチェックする</span>
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="flex-1">
-                  <Link href="/agent/comparison" className="flex items-center justify-center gap-2 w-full px-7 py-3.5 text-sm font-semibold text-blue-600 border border-gray-300 bg-white rounded hover:bg-gray-50 hover:border-gray-400 transition-all">
-                    全エージェント比較を見る
+                  <Link href="/agent/comparison" className="flex flex-col items-center justify-center gap-1 w-full px-7 py-3 text-blue-600 border border-gray-300 bg-white rounded hover:bg-gray-50 hover:border-gray-400 transition-all">
+                    <span className="text-sm font-semibold">全エージェント比較を見る</span>
+                    <span className="text-[10px] text-slate-500">条件に合う求人を探す</span>
                   </Link>
                 </motion.div>
               </div>

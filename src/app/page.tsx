@@ -197,54 +197,7 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* 7. Webistとの接続フロー */}
-      <section className="py-16 sm:py-24 bg-white border-y border-slate-100">
-         <motion.div {...fadeIn} className="max-w-[1000px] mx-auto px-5 sm:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">本メディアの役割と送客フロー</h2>
-            <p className="text-sm text-slate-500">C&R社（Webist）との接続・シナジー</p>
-          </div>
-          
-          <div className="flex flex-col md:flex-row items-stretch justify-center gap-4 text-center">
-             <div className="flex-1 bg-slate-50 border border-slate-200 rounded-xl p-6 flex flex-col items-center justify-center relative">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 mb-3 text-slate-500">
-                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-               </svg>
-               <div className="font-bold text-slate-800">自然検索流入</div>
-               <div className="text-xs text-slate-500 mt-1">SEO・指名検索</div>
-               <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-8 h-8 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400">→</div>
-               <div className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-8 h-8 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 rotate-90">→</div>
-             </div>
-             
-             <div className="flex-[1.5] bg-blue-50 border border-blue-200 rounded-xl p-6 flex flex-col items-center justify-center relative shadow-sm">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-9 h-9 mb-3 text-blue-600">
-                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-               </svg>
-               <div className="font-bold text-blue-900 mb-1">本比較メディア</div>
-               <div className="text-xs text-blue-700 font-medium">SEO記事 ＆ 比較・ランキング</div>
-               <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-8 h-8 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400">→</div>
-               <div className="md:hidden absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 w-8 h-8 bg-white border border-slate-200 rounded-full flex items-center justify-center text-slate-400 rotate-90">→</div>
-             </div>
 
-             <div className="flex-1 flex flex-col gap-3">
-               <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-4 flex flex-col items-center justify-center h-full">
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7 mb-2 text-indigo-500">
-                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
-                 </svg>
-                 <div className="font-bold text-indigo-900 text-sm">自社送客</div>
-                 <div className="text-[10px] text-indigo-700 mt-1">Webist・C&R社連携</div>
-               </div>
-               <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex flex-col items-center justify-center h-full">
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7 mb-2 text-green-600">
-                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                 </svg>
-                 <div className="font-bold text-green-900 text-sm">アフィリエイト</div>
-                 <div className="text-[10px] text-green-700 mt-1">他社紹介マネタイズ</div>
-               </div>
-             </div>
-          </div>
-        </motion.div>
-      </section>
 
       {/* 8. AI Diagnosis Section (Future Expansion) */}
       <section className="py-24 bg-slate-50">
