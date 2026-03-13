@@ -8,6 +8,8 @@ import Breadcrumb from "@/components/layout/Breadcrumb";
 import RankingCard from "@/components/ui/RankingCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import SecretJobTips from "@/components/ui/SecretJobTips";
+import MultipleRegistrationGuide from "@/components/ui/MultipleRegistrationGuide";
+import SurveyOverview from "@/components/ui/SurveyOverview";
 import CTACard from "@/components/ui/CTACard";
 
 const fadeIn = {
@@ -144,12 +146,13 @@ export default function ComparisonPageContent() {
       </section>
 
       {/* Rankings */}
-      <section className="relative py-24 sm:py-32 bg-slate-50">
+      <section className="relative py-12 sm:py-16 bg-slate-50">
         <motion.div {...fadeIn} className="relative max-w-[1200px] mx-auto px-5 sm:px-8">
           
-          {/* 非公開求人TIPS */}
-          <div className="max-w-[800px] mx-auto mb-16">
+          {/* 非公開求人TIPS & 複数登録ガイド */}
+          <div className="max-w-[800px] mx-auto mb-16 space-y-8">
             <SecretJobTips />
+            <MultipleRegistrationGuide />
           </div>
 
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-8">おすすめ転職エージェントランキング</h2>
@@ -166,11 +169,16 @@ export default function ComparisonPageContent() {
               </motion.div>
             ))}
           </div>
+
+          {/* 調査概要ブロック */}
+          <div className="mt-8 max-w-[800px] mx-auto">
+            <SurveyOverview />
+          </div>
         </motion.div>
       </section>
 
       {/* Criteria */}
-      <section className="py-16 sm:py-20">
+      <section className="py-10 sm:py-12">
         <motion.div {...fadeIn} className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-8">比較基準・評価方法</h2>
           <div className="bg-white border border-gray-200 shadow-sm rounded-2xl p-7 sm:p-10">
@@ -197,7 +205,7 @@ export default function ComparisonPageContent() {
       </section>
 
       {/* FAQ */}
-      <section className="relative py-24 sm:py-32 bg-slate-50">
+      <section className="relative py-12 sm:py-16 bg-slate-50">
         <motion.div {...fadeIn} className="relative max-w-[1200px] mx-auto px-5 sm:px-8">
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight text-center mb-8">よくある質問</h2>
           <div className="max-w-3xl mx-auto">
@@ -207,7 +215,7 @@ export default function ComparisonPageContent() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 sm:py-20">
+      <section className="py-10 sm:py-12">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <CTACard
             title="あなたに合った転職エージェントを見つけよう"
