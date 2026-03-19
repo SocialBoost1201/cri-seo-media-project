@@ -27,7 +27,7 @@ export default function Footer() {
             <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">カテゴリ</h3>
             <ul className="flex flex-col gap-3">
               {footerNavItems.categories.map((item) => (
-                <li key={item.href}>
+                <li key={item.name}>
                   <Link href={item.href} className="text-sm text-slate-400 hover:text-white transition-colors">{item.name}</Link>
                 </li>
               ))}
@@ -39,7 +39,7 @@ export default function Footer() {
             <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">人気コンテンツ</h3>
             <ul className="flex flex-col gap-3">
               {footerNavItems.popular.map((item) => (
-                <li key={item.href}>
+                <li key={item.name}>
                   <Link href={item.href} className="text-sm text-slate-400 hover:text-white transition-colors">{item.name}</Link>
                 </li>
               ))}
@@ -51,7 +51,7 @@ export default function Footer() {
             <h3 className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">運営情報</h3>
             <ul className="flex flex-col gap-3">
               {footerNavItems.info.map((item) => (
-                <li key={item.href}>
+                <li key={item.name}>
                   <Link href={item.href} className="text-sm text-slate-400 hover:text-white transition-colors">{item.name}</Link>
                 </li>
               ))}
