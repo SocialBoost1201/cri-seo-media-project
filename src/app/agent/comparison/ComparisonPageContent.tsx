@@ -102,7 +102,7 @@ export default function ComparisonPageContent() {
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
                           {i < 3 && (
-                            <div className={`w-6 h-6 rounded flex items-center justify-center font-bold text-[11px] shrink-0 ${rankStyles[i + 1]}`}>
+                            <div className={`w-6 h-6 rounded flex items-center justify-center font-bold text-xs shrink-0 ${rankStyles[i + 1]}`}>
                               {i + 1}
                             </div>
                           )}
@@ -114,7 +114,7 @@ export default function ComparisonPageContent() {
                       <td className="px-6 py-4 text-slate-600">
                         <div className="flex flex-wrap gap-1">
                           {agent.industries.slice(0, 3).map(ind => (
-                            <span key={ind} className="bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded text-[10px] border border-slate-200">{ind}</span>
+                            <span key={ind} className="bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded text-xs border border-slate-200">{ind}</span>
                           ))}
                         </div>
                       </td>

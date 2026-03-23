@@ -65,7 +65,7 @@ export default function Footer() {
             <p className="text-xs text-slate-400 leading-relaxed font-bold mb-2">
               当メディアのポリシーおよび公平性について
             </p>
-            <p className="text-[11px] text-slate-500 leading-relaxed">
+            <p className="text-xs text-slate-500 leading-relaxed">
               本サイトはアフィリエイトプログラムに参加しており、提携先から広告報酬を受け取ることがあります。ただし、掲載しているランキングや評価基準は、当メディア独自のインターネット調査および利用者の口コミにのみ基づき算出したものであり、提携の有無や報酬額が掲載順位に影響することは一切ありません。<br className="hidden sm:inline" />
               私たちは求職者の方々が「失敗しない転職」を実現できるよう、客観的な事実に基づいた透明性の高い情報提供をお約束します。
             </p>

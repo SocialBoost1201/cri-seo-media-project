@@ -20,7 +20,7 @@ export default function CategoryCard({ category }: Props) {
             <h3 className="text-[17px] font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-tight mb-1">
               {category.name}
             </h3>
-            <span className="inline-block text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+            <span className="inline-block text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
               {category.articleCount}記事
             </span>
           </div>

@@ -25,7 +25,7 @@ export default function RankingCard({ agent, rank }: Props) {
         <div className="flex items-center gap-4">
           {rank && (
             <div className="flex flex-col items-center justify-center shrink-0 w-10">
-              <span className={`text-[10px] font-black tracking-widest ${rankColor}`}>RANK</span>
+              <span className={`text-xs font-black tracking-widest ${rankColor}`}>RANK</span>
               <span className={`text-3xl font-black italic leading-none ${rankColor}`}>{rank}</span>
             </div>
           )}
@@ -34,7 +34,7 @@ export default function RankingCard({ agent, rank }: Props) {
           </h3>
         </div>
         <div className="hidden sm:flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg border border-blue-100">
-          <span className="text-[10px] font-bold tracking-wider">総合評価</span>
+          <span className="text-xs font-bold tracking-wider">総合評価</span>
           <span className="text-base font-black">★ {agent.score}</span>
         </div>
       </div>
@@ -53,7 +53,7 @@ export default function RankingCard({ agent, rank }: Props) {
           </div>
           <div className="flex flex-wrap gap-1">
             {agent.features.map((feature) => (
-              <span key={feature} className="text-[10px] items-center bg-slate-100 text-slate-600 px-2 py-1 rounded-md font-bold">
+              <span key={feature} className="text-xs items-center bg-slate-100 text-slate-600 px-2 py-1 rounded-md font-bold">
                 {feature}
               </span>
             ))}

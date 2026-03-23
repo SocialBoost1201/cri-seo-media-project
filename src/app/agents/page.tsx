@@ -60,7 +60,7 @@ export default function AgentsIndexPage() {
                     <td className="px-4 py-4 text-slate-700 border-x border-slate-100/50 text-xs">
                       <div className="flex gap-1 flex-wrap w-48 whitespace-normal">
                         {agent.industries.slice(0, 3).map((ind) => (
-                           <span key={ind} className="bg-slate-100 px-1.5 py-0.5 rounded text-[10px] text-slate-600">{ind}</span>
+                           <span key={ind} className="bg-slate-100 px-1.5 py-0.5 rounded text-xs text-slate-600">{ind}</span>
                         ))}
                       </div>
                     </td>

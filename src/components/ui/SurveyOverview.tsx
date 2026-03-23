@@ -35,7 +35,7 @@ export default function SurveyOverview() {
           </div>
         </div>
         
-        <p className="text-[11px] sm:text-xs text-slate-500 pt-2 border-t border-slate-200">
+        <p className="text-xs sm:text-xs text-slate-500 pt-2 border-t border-slate-200">
           ※ 提携エージェントからの広告報酬の有無に関わらず、独自の利用評価データを優先して順位付けを行っており、No.1表示の恣意的な操作は行っておりません。順位は定期的な調査により変動する可能性があります。
         </p>
       </div>

@@ -125,7 +125,7 @@ export default function ArticlePageContent({ article, agents, faqs, relatedArtic
             <div className="flex flex-col gap-5">
               {topAgents.slice(0, 1).map((agent, i) => (
                 <div key={agent.id} className="relative">
-                  <span className="absolute -top-3 -left-3 z-10 bg-red-500 text-white text-[10px] font-black px-2 py-1 rounded shadow-sm tracking-wider transform -rotate-6">
+                  <span className="absolute -top-3 -left-3 z-10 bg-red-500 text-white text-xs font-black px-2 py-1 rounded shadow-sm tracking-wider transform -rotate-6">
                     読者人気No.1
                   </span>
                   <RankingCard agent={agent} />

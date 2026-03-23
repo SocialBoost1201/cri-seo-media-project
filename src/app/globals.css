@@ -4,6 +4,7 @@
   :root {
     --max-width: 1200px;
     --header-height: 72px;
+    --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
   }
 
   html { scroll-behavior: smooth; }
@@ -16,6 +17,10 @@
     font-feature-settings: "palt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  main {
+    padding-bottom: max(0px, var(--safe-area-inset-bottom));
   }
 
   ::selection {
@@ -33,5 +38,25 @@
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* UIUX-Guard: mobile tiny text normalization */
+@media (max-width: 767px) {
+  .text-\[9px\],
+  .text-\[10px\],
+  .text-\[11px\] {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"],
+  [style*="font-size: 12px"] {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
   }
 }

@@ -124,7 +124,7 @@ export default function HomePage() {
                   <span className="text-[22px] sm:text-2xl font-bold text-blue-600 font-sans tracking-tight">{item.title}</span>
                   <span className="text-[13px] sm:text-[15px] font-bold text-slate-800">{item.sub}</span>
                 </div>
-                <span className="text-[10px] text-slate-800 ml-auto group-hover:translate-x-1 transition-transform">▶</span>
+                <span className="text-xs text-slate-800 ml-auto group-hover:translate-x-1 transition-transform">▶</span>
               </Link>
             ))}
           </div>
@@ -201,7 +201,7 @@ export default function HomePage() {
       <section className="py-12 bg-slate-50">
         <motion.div {...fadeIn} className="max-w-[1000px] mx-auto px-5 sm:px-8">
           <div className="bg-white rounded-2xl p-6 sm:p-10 border border-slate-200 relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-slate-600 text-white text-[10px] font-black px-4 py-1.5 rounded-bl-xl tracking-widest shadow-sm">
+            <div className="absolute top-0 right-0 bg-slate-600 text-white text-xs font-black px-4 py-1.5 rounded-bl-xl tracking-widest shadow-sm">
               将来拡張機能
             </div>
             
